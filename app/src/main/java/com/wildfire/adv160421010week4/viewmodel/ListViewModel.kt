@@ -22,4 +22,8 @@ class ListViewModel: ViewModel() {
         studentLoadErrorLD.value = false
         loadingLD.value = false
     }
+
+    fun getStudentById(studentId: String): Student? {
+        return studentsLD.value?.find { it.id == studentId }
+    }
 }
